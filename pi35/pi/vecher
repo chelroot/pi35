@@ -1,0 +1,38 @@
+#!/bin/bash
+
+DATE=`date '+%d'.'%m'.%g`
+
+mkdir /var/www/html/"$DATE"
+
+cp -f /var/www/html/a2.html /var/www/html/"$DATE"/a2.html
+
+cp -f /var/www/html/aa2.html /var/www/html/"$DATE"/aa2.html
+
+cp -f /var/www/html/n2.html  /var/www/html/"$DATE"/n2.html
+
+echo -n > /var/www/html/a2.html
+
+echo -n > /var/www/html/aa2.html
+
+echo -n > /var/www/html/n2.html
+
+killall python
+
+sleep 1
+
+nohup /home/pi/pi/noxr.py & >> /var/www/html/nohup.out
+
+/home/pi/pi/pik1.py
+
+/home/pi/pi/pik1.py
+
+sleep 1
+
+/home/pi/pi/pik1.py
+
+echo "<br /> вечер" `date '+%d'.'%m'.'%g'-'%H'.'%M'`  >> /var/www/html/d.htm
+
+
+
+
+
